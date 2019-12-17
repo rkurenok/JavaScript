@@ -1,37 +1,14 @@
-function deepEqual(obj1, obj2)
-{
-    if(typeof obj1 == typeof obj1)
-    {
-        if(typeof obj1 == "object" && obj1 != null)
-        {
-            let equals = true;
+function deepEqual(a, b) {
 
-            for (let property in obj1) {
-
-                if(obj1.hasOwnProperty(property) && obj2.hasOwnProperty(property)) // Проверить, оба ли сравниваемые объекты имеют это свойства
-                {
-                    if(!deepEqual(obj1[property], obj2[property])) //сравнить свойства
-                    {
-                        equals = false;
-                    }
-                }
-                else
-                {
-                    equals = false;  // если не у каждого - поставить значение переменной
-                }
-            }
-
-            return equals;
-        }
-        else
-        {
-            return obj1 === obj2;
-        }
+    if (a === b) {
+        return true;
     }
-    else
-    {
+ 
+    if (a == null || typeof(a) != "object" || b == null || typeof(b) != "object") {
         return false;
     }
+
+    return JSON.stringify(a)===JSON.stringify(b);
 }
 
 var obj = {here: {is: "an"}, object: 2};
