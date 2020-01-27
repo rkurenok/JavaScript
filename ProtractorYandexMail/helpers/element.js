@@ -12,14 +12,9 @@ async function waitForElementAndSendKeys(element, value) {
     await element.sendKeys(value);
 }
 
-// async function getTextElement(element) {
-//     browser.wait(EC.visibilityOf(element), consts.timeWaiting);
-//     return await element.getText();
-// }
-
 async function checkElementHasText(element, text) {
     await browser.wait(EC.visibilityOf(element), consts.timeWaiting);
-    await expect(element.getText()).toEqual(text);
+    expect(await element.getText()).toEqual(text);
 }
 
 async function mouseLeftClick(element) {
@@ -28,7 +23,7 @@ async function mouseLeftClick(element) {
 }
 
 async function checkElementIsInvisible(element) {
-    await expect(browser.wait(EC.invisibilityOf(element), consts.timeWaiting));
+    expect(await browser.wait(EC.invisibilityOf(element), consts.timeWaiting));
 }
 
 exports.waitForElementAndClick = waitForElementAndClick;

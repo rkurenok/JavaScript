@@ -39,7 +39,7 @@ describe('Protractor Tests Yandex Mail', function() {
 
     it('create folder', function() {
         mail.createFolder(consts.folderName);
-        browser.sleep(2000);
+        //browser.sleep(2000);
         mail.checkFolderNameText(consts.folderName, consts.folderName);
     });
 
@@ -56,6 +56,7 @@ describe('Protractor Tests Yandex Mail', function() {
 
     it('invalid login', function() {
         yandexBy.enteredMail();
-        authorization.checkPasswordFieldErrorText(consts.login, consts.invalidPassword);
+        authorization.entryPassword(consts.login);
+        authorization.checkPasswordFieldErrorText(consts.invalidPassword);
     });
 });

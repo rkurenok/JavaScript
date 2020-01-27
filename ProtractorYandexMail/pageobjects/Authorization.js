@@ -27,8 +27,7 @@ class Autorization {
         await helpers.waitForElementAndClick(this.submitButton);
     }
 
-    async checkPasswordFieldErrorText(invalidPassword ,text) {
-        this.entryPassword(invalidPassword);
+    async checkPasswordFieldErrorText(text) {
         return await helpers.checkElementHasText(this.passwordFieldErrorDiv, text)
     }
 }
