@@ -18,9 +18,7 @@ class Mail {
     }
 
     get folderLink() {
-        return function(folderName) {
-            element(by.xpath('//a[@title="' + folderName + '"]'));
-        } 
+        return folderName => element(by.xpath(`//a[@title="${folderName}"]`));
     }
 
     get settingMailLink() {

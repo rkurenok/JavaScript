@@ -6,7 +6,7 @@ class YandexBy {
     }
 
     async checkEnteredMailButtonText(text) {
-        return await helpers.checkElementHasText(this.enteredMailLink, text);
+        await helpers.checkElementHasText(this.enteredMailLink, text);
     }
 
     async enteredMail() {

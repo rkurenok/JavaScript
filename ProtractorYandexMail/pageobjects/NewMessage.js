@@ -2,7 +2,7 @@ const helpers = require('./../helpers/element.js');
 
 class NewMessage {
     get whomMessageDiv() {
-        return element(by.xpath('//div[@class="mail-Compose-Field-Input"]/child::div'));
+        return element(by.xpath('//div[@name="to"]'));
     }
 
     get messageSubjectInput() {

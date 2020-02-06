@@ -39,7 +39,6 @@ describe('Protractor Tests Yandex Mail', function() {
 
     it('create folder', function() {
         mail.createFolder(consts.folderName);
-        //browser.sleep(2000);
         mail.checkFolderNameText(consts.folderName, consts.folderName);
     });
 
