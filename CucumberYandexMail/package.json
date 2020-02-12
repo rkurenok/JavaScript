@@ -1,0 +1,19 @@
+{
+  "name": "cucumberyandexmail",
+  "version": "1.0.0",
+  "description": "",
+  "main": "config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {},
+  "dependencies": {
+    "chai": "^4.2.0",
+    "cucumber": "^6.0.5",
+    "protractor": "^5.4.3",
+    "protractor-cucumber-framework": "^6.2.0",
+    "yargs": "^15.1.0"
+  }
+}
